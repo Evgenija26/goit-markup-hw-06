@@ -53,6 +53,12 @@ li{
     margin: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 body {
 
     position: relative;
@@ -65,12 +71,10 @@ body {
     background: var(--main-bg-cl);
 } 
 
-
 .container {
     width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-
 }
 
 .link {
@@ -132,6 +136,7 @@ border-bottom: 1px solid #ECECEC;
     padding: 30px 0;
 
     color: var(--main-txt-cl);
+    text-decoration: none;
 }
 
 .logo-footer{
@@ -167,13 +172,12 @@ border-bottom: 1px solid #ECECEC;
 
 .nav-link:hover,
 .nav-link:focus {
-    /* border-bottom: 4px solid; */
     color: var(--accent-cl);
     
 }
 
 .nav-link{
-    position: relative;
+    
     color: var(--main-txt-cl); 
     padding-bottom: 32px;
     padding-top: 32px;   
@@ -181,8 +185,8 @@ border-bottom: 1px solid #ECECEC;
     line-height: 4px;
     text-decoration: none;
     transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .top-nav::after {
@@ -191,23 +195,17 @@ border-bottom: 1px solid #ECECEC;
 
     left: 50%;
     width: 100%;
+    height: 4px;
 
     transform: translateX(-50%);
-    background-color: var(--accent-color);
     border-radius: 2px; 
 
-            display: block;
-
-            bottom: 0;
-
-            background-color: var(--accent-cl);
-
-        
+    bottom: -1px;
+    background-color: var(--accent-cl);
 }
 
 .top-nav{
     position: relative;
-    border-bottom: 4px solid;
     color: var(--accent-cl);
 }
 
@@ -218,7 +216,6 @@ border-bottom: 1px solid #ECECEC;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-
 
     margin-right: 50px;
 
@@ -234,13 +231,6 @@ border-bottom: 1px solid #ECECEC;
     margin-left: auto;
 
 }
-
-
-
-/* 
-.header-wrapper-item :last-child{
-    margin-right: 0px;
-} */
 
 .header-contact {
     font-family: var(--main-font);
@@ -276,6 +266,7 @@ border-bottom: 1px solid #ECECEC;
 
     display: flex;
     align-items: center;
+    text-decoration: none;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -293,10 +284,6 @@ border-bottom: 1px solid #ECECEC;
 
 .studio-icon {
     margin-right: 10px;
-    /* transition: color 250ms var(--accent-cl), background-color 250ms var(--accent-cl),
-        box-shadow 250ms var(--accent-cl);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .studio-icon:hover,
@@ -583,30 +570,38 @@ border-bottom: 1px solid #ECECEC;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+    fill: var(--main-bg-cl);
     
 
 }
 
 .modal .custom-checkbox {
-    border: 1px var(--black);
-    border-radius: 2px;
+    width: 16px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--black);
+        border-radius: 2px;
+        transition: var(--modal-transition);
+        margin-right: 7px;
     transition: background-color 250ms var(--hover-cubic);
+    
+    fill: #ffffff;
 }
 
-.custom-checkbox:hover,
-.custom-checkbox:focus{
-    background-color: var(--accent-cl);
+.modal .checkbox:focus+.custom-checkbox {
+    border-color: var(--accent-cl);
+}
+
+.modal .checkbox:checked+.custom-checkbox {
+    fill: var(--accent-cl);
     border: 0;
-    border-color: var(--accent-cl);
-    fill:#fff;
+    
 }
 
 .modal .checkbox:focus+.custom-checkbox {
-    border-color: var(--accent-cl);
-}
-
-.modal .checkbox:focus+.custom-checkbox {
-    background-color: var(--accent-cl);
+    fill: var(--accent-cl);
     border: 0;
 }
 
@@ -762,7 +757,7 @@ border-bottom: 1px solid #ECECEC;
     align-items: center;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 70px;
     background: rgba(47, 48, 58, 0.8);
@@ -1206,6 +1201,7 @@ color: #FFFFFF;
     letter-spacing: 0.02em;
     margin-top: 9px;
     color: var(--secondary-txt-cl);
+    text-decoration: none;
 }
 
 /*======================*/
