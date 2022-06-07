@@ -571,8 +571,6 @@ border-bottom: 1px solid #ECECEC;
     clip-path: inset(50%);
     margin: -1px;
     fill: var(--main-bg-cl);
-    
-
 }
 
 .modal .custom-checkbox {
@@ -594,15 +592,14 @@ border-bottom: 1px solid #ECECEC;
     border-color: var(--accent-cl);
 }
 
-.modal .checkbox:checked+.custom-checkbox {
+.checkbox:checked+.custom-checkbox {
     fill: var(--accent-cl);
     border: 0;
-    
 }
 
-.modal .checkbox:focus+.custom-checkbox {
-    fill: var(--accent-cl);
-    border: 0;
+.checkbox:focus+.custom-checkbox {
+    border-color: aqua;
+
 }
 
 .modal .confirm .label-text {
